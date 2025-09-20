@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MST Visualizer (Kruskal → Prim)</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<h2>MST Visualizer</h2>
+			<label class="field">Total vertices
+				<input id="totalVertices" type="number" min="1" value="5" />
+			</label>
+			<button id="btnSetVertices">Set Vertex Count</button>
+			<hr />
+			<p class="instructions">
+				Steps:
+				<ol>
+					<li>Click on canvas to place exactly N vertices.</li>
+					<li>Click two vertices to add an edge and enter weight.</li>
+					<li>Click Run to animate Kruskal then Prim.</li>
+				</ol>
+			</p>
+			<div class="legend">
+				<h3>Legend</h3>
+				<div><span class="chip green"></span> Green: in final MST</div>
+				<div><span class="chip blue"></span> Blue: edge considered</div>
+				<div><span class="chip red"></span> Red: rejected edge</div>
+				<div><span class="chip amber"></span> Amber: visited node (Prim)</div>
+			</div>
+			<div class="actions">
+				<button id="btnRunKruskal">Run Kruskal</button>
+				<button id="btnRunPrim">Run Prim</button>
+				<button id="btnRunBoth">Run Both (Kruskal → Prim)</button>
+			</div>
+			<div class="playback">
+				<button id="btnPrev">⟨ Prev</button>
+				<button id="btnPlayPause">▶ Play</button>
+				<button id="btnNext">Next ⟩</button>
+			</div>
+			<button id="btnResetColors">Reset Colors</button>
+			<div id="status" class="status">Ready.</div>
+		</aside>
+		<main class="stage">
+			<canvas id="canvas" width="1000" height="650"></canvas>
+		</main>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
