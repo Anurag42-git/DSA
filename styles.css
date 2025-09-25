@@ -1,0 +1,41 @@
+:root {
+	--bg: #0b1220;
+	--panel: #111927;
+	--text: #e5e7eb;
+	--muted: #94a3b8;
+	--stroke: #1f2937;
+	--edge: #64748b;
+	--blue: #3b82f6;
+	--red: #ef4444;
+	--green: #10b981;
+	--amber: #f59e0b;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { font-family: Segoe UI, Roboto, sans-serif; color: var(--text); background: var(--bg); }
+
+.app { display: flex; height: 100vh; }
+.sidebar { width: 320px; background: var(--panel); padding: 16px; overflow: auto; }
+.sidebar h2 { margin: 0 0 8px; }
+.sidebar h3 { margin: 16px 0 8px; }
+.field { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+input { background: var(--bg); color: var(--text); border: 1px solid var(--stroke); border-radius: 6px; padding: 8px; }
+button { background: var(--blue); color: white; border: 0; padding: 10px 12px; border-radius: 8px; margin: 6px 0; cursor: pointer; }
+button#btnResetColors { background: #334155; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.actions button { margin: 0; }
+.playback { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+.playback button { margin: 0; background: #475569; }
+.instructions { color: var(--muted); }
+.legend .chip { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+.legend .green { background: var(--green); }
+.legend .blue { background: var(--blue); }
+.legend .red { background: var(--red); }
+.legend .amber { background: var(--amber); }
+.status { margin-top: 10px; color: var(--muted); font-size: 14px; }
+
+.stage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px; }
+canvas { background: var(--bg); border: 1px solid var(--stroke); border-radius: 8px; width: 100%; height: 100%; }
+
